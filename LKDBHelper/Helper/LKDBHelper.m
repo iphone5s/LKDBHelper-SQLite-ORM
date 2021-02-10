@@ -732,7 +732,7 @@ static BOOL LKDBNullIsEmptyString = NO;
         }
     }
 
-    NSString *createTableSQL = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS %@(%@%@)", tableName, table_pars, pksb];
+    NSString *createTableSQL = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS ‘%@’(%@%@)", tableName, table_pars, pksb];
 
     BOOL isCreated = [self executeSQL:createTableSQL arguments:nil];
 
